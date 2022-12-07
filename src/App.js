@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './style.css';
 
-function App() {
+import Item from './components/Item/Item.jsx';
+import ItemDetail from './components/Item/ItemDetail.jsx';  
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemList from './components/ItemList/ItemList.jsx';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetail from './components/Item/ItemDetail.jsx'; 
+import Loader from './components/Loader/Loader.jsx';
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Item/>
+      <ItemDetail/>
+      <ItemDetailContainer />
+      <ItemList/>
+      <ItemListContainer greeting="Listado de productos" />
+      <Loader/>
     </div>
   );
 }
-
-export default App;
